@@ -29,7 +29,7 @@ foreach ($rek as $rekeningnummer){
     $eerstedigits = substr($rekeningnummer , 4 , 10);
     $checkdigit =substr($rekeningnummer , 14 , 2 );
 
-    if($eerstedigits % 97 != $checkdigit || ($eerstedigits % 97 == 0 && $checkdigit != 97 )){
+    if($eerstedigits % 97 != $checkdigit OR ($eerstedigits % 97 == 0 AND $checkdigit != 97 )){
 
         printf("Bankrekening %s is FOUT HOOR !!!\n" , $rekeningnummer);
     }
