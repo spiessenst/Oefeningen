@@ -10,9 +10,10 @@ function SplitParagraph($tekst, $breedte)
 {
     $lijnlengte = 0;
     $woorden = explode(" ", $tekst);
-    $paragraaf = "";
+    $paragraaf = null;
 
     foreach ($woorden as $woord) {
+
         if ($lijnlengte + strlen($woord) > $breedte) {
             $lijnlengte = 0;
             $paragraaf .= "\n";
