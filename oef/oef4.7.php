@@ -8,19 +8,20 @@ $tekst = "Ruim 50.000 kandidaten hengelen in Vlaanderen naar uw stem en hopen " 
 
 function SplitParagraph($tekst, $breedte)
 {
+
     $lijnlengte = 0;
     $woorden = explode(" ", $tekst);
     $paragraaf = null;
 
     foreach ($woorden as $woord) {
-        if ($lijnlengte + strlen($woord) > $breedte) {
-            $lijnlengte = 0;
+
+        if ($lijnlengte + strlen($woord) +1 > $breedte + 1){
             $paragraaf .= "\n";
-        } else {
-            $woord = $woord . " ";
-            $lijnlengte += strlen($woord);
-            $paragraaf .= $woord;
+            $lijnlengte = 0;
         }
+            $lijnlengte += strlen($woord) +1;
+            $paragraaf .= $woord." " ;
+
     }
     return $paragraaf;
 }
