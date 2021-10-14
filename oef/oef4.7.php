@@ -13,7 +13,6 @@ function SplitParagraph($tekst, $breedte)
     $paragraaf = null;
 
     foreach ($woorden as $woord) {
-
         if ($lijnlengte + strlen($woord) > $breedte) {
             $lijnlengte = 0;
             $paragraaf .= "\n";
@@ -25,7 +24,6 @@ function SplitParagraph($tekst, $breedte)
     }
     return $paragraaf;
 }
-
 print SplitParagraph($tekst, 30);
 print "\n\n";
 print SplitParagraph($tekst, 50);
