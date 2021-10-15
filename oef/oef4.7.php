@@ -15,13 +15,12 @@ function SplitParagraph($tekst, $breedte)
 
     foreach ($woorden as $woord) {
 
-        if ($lijnlengte + strlen($woord) +1 > $breedte + 1){
+        if ($lijnlengte + strlen($woord) +1  > $breedte ){
             $paragraaf .= "\n";
             $lijnlengte = 0;
         }
-            $lijnlengte += strlen($woord) +1;
+            $lijnlengte += strlen($woord) + 1;
             $paragraaf .= $woord." " ;
-
     }
     return $paragraaf;
 }
