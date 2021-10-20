@@ -1,9 +1,10 @@
 <?php
 
-$kapitaal = readline("Wat is het kapitaal: ");
+$kapitaal= readline("Wat is het kapitaal: ");
 $intrest = readline("Wat is de interst: ");
 $looptijd = readline("Wat is de looptijd: ");
 $limietvraag = readline("Is er een limiet ? (j/n)");
+$limiet = 0;
 
 
 if ($limietvraag == "j") {
